@@ -1,0 +1,71 @@
+/* CSS Document */
+
+.page{
+	
+}
+
+.tab{
+	position:relative;
+	width:200px;
+	height:100px;
+	float:left;
+	margin:10px;
+	cursor:pointer;
+	
+	background:#e6e2df;
+
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+	background-repeat:no-repeat;
+	background-image:url(sitelogo.png);		
+	background-position: 200px;
+}
+
+.tab:hover{
+	background-color:#37597a;
+	background-position: 158px;	
+}
+.tab.selected,.tab.selected:hover{
+	background-color:#a7393a;
+	background-image:url(sher.png);
+	background-position: 100px;	
+}
+
+.ta1:hover{
+    background-color:#237abe;
+}
+.ta2:hover{
+    background-color:#ff8400;
+}
+.ta3:hover{
+    background-color:#4ed2fe;
+}
+.ta4:hover{
+    background-color:#37597a;
+}
+
+.tabext{
+	width:200px;
+	height:0px;
+	position:absolute;	
+	top:100px;
+	overflow:hidden;
+	background-color: #C9F;
+	
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;	
+}
+.tab.selected .tabext{
+	height: 100px;	
+}
+
+
+.para{
+	margin:200px 0 0;
+	color: #919492;
+	font-size:20px;
+	font-family: Helvetica, sans-serif
+}
+.para:first-letter{
+	color: #000;	
+}
