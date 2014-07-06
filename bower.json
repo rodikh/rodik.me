@@ -1,0 +1,8 @@
+{
+    "name": "rodik.me",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "2.*.*",
+        "particle-lines": "git@github.com:rodikh/particle-lines"
+    }
+}
