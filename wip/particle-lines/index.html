@@ -3,7 +3,7 @@
 <head lang="en">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../../bower_components/animate.css/animate.css">
     <meta charset="UTF-8">
     <title>Particle Lines</title>
     <style>
@@ -73,92 +73,12 @@
         <div class="block animated fadeInUp delay5"></div>
     </div>
 
-    <script src="bower_components/easeljs/lib/easeljs-0.7.1.combined.js"></script>
+    <script src="../../bower_components/particle-lines/dist/particle-lines.min.js"></script>
 
-    <script src="js/Vector.js"></script>
-    <script src="js/Particle.js"></script>
 
     <script>
         var canvas = document.getElementById("main");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-//        var ctx = canvas.getContext('2d');
-        var stage = new createjs.Stage(canvas);
-
-        var VIEW_HEIGHT = canvas.height;
-        var VIEW_WIDTH = canvas.width;
-
-        var MIN_DISTANCE = 120;
-
-
-        var particles = [],
-            i;
-        for (i = 0; i < 60; i++) {
-            var point = new Vector(Math.random() * canvas.width,  Math.random() * canvas.height);
-            var velocity = new Vector(Math.random() * 4 - 2,  Math.random() * 4 - 2);
-            particles.push(new Particle(point, velocity));
-        }
-
-        /**
-         * Distance between two points
-         * @param {{number, number}} p1 Point to measure distance from
-         * @param {{number, number}} p2 Point to measure distance to
-         * @returns {number} Distance between the points
-         */
-        function distance(p1, p2) {
-            return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
-        }
-
-        function tick () {
-            var i,
-                particlesLength = particles.length;
-            for (i = 0; i < particlesLength; i++) {
-                particles[i].move();
-//                particles[i].draw();
-            }
-
-            drawLines();
-            stage.update();
-        }
-
-        var lines = [];
-
-        function drawLine(p1, p2, dist){
-            var r = (p1.y / VIEW_HEIGHT) * 255;
-            var g = (p2.x / VIEW_WIDTH) * 255;
-            var b = 3 * (p1.x + p1.y) / (VIEW_WIDTH + VIEW_HEIGHT) * 255;
-            var alpha = 1 - dist / MIN_DISTANCE;
-
-            var color = 'rgba('+(r|r)+','+(g|g)+','+(b|b)+', ' + alpha +')';
-
-            var line = new createjs.Shape();
-            line.graphics.moveTo(p1.x,p1.y).setStrokeStyle(1).beginStroke(color).lineTo(p2.x,p2.y);
-            stage.addChild(line);
-            lines.push(line);
-        }
-
-        function drawLines () {
-            var i;
-            for (i = 0; i < lines.length; i++) {
-                stage.removeChild(lines[i]);
-            }
-
-            var particlesLength = particles.length;
-            for (i = 0; i < particlesLength; i++) {
-                var j;
-                for (j = i + 1; j < particlesLength; j++) {
-                    var dist = distance(particles[i].position, particles[j].position);
-                    if (dist < MIN_DISTANCE) {
-                        drawLine(particles[i].position, particles[j].position, dist);
-                    }
-                }
-            }
-        }
-
-//        createjs.Ticker.addEventListener("tick", tick);
-        createjs.Ticker.setFPS(60);
-
+        var particleLines = new ParticleLines(canvas);
     </script>
 </body>
 </html>
