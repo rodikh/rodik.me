@@ -1,0 +1,64 @@
+/* line 3, layout.scss */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* line 10, layout.scss */
+.background canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+/* line 17, layout.scss */
+.page-header {
+  margin-top: 80px;
+  border-bottom: none;
+}
+/* line 21, layout.scss */
+.page-header h1 {
+  font-weight: 600;
+}
+
+/* line 28, layout.scss */
+.projects .panel {
+  min-height: 250px;
+}
+
+/* line 33, layout.scss */
+.contact-icons {
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+/* line 37, layout.scss */
+.contact-icons .fa {
+  color: #888;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+/* line 42, layout.scss */
+.contact-icons .fa-facebook-square:hover {
+  color: #3b5998;
+}
+/* line 45, layout.scss */
+.contact-icons .fa-twitter-square:hover {
+  color: #55acee;
+}
+/* line 48, layout.scss */
+.contact-icons .fa-linkedin-square:hover {
+  color: #0976b4;
+}
+/* line 51, layout.scss */
+.contact-icons .fa-envelope-o:hover {
+  color: #fff;
+}
+/* line 54, layout.scss */
+.contact-icons .fa-github-square:hover {
+  color: #4183c4;
+}
