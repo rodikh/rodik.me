@@ -3,7 +3,9 @@
     "version": "0.0.1",
     "dependencies": {
         "jquery": "2.*.*",
+        "bootstrap": "3.*",
         "animate.css": "*",
-        "rodikh.particle-lines": "*"
+        "rodikh.particle-lines": "*",
+        "fontawesome": "*"
     }
 }
