@@ -1,0 +1,12 @@
+[submodule "demos/triangle-wars"]
+	path = demos/triangle-wars
+	url = https://github.com/rodikh/triangle-wars.git
+[submodule "demos/fractals"]
+	path = demos/fractals
+	url = https://github.com/rodikh/fractals.git
+[submodule "demos/biomorphs"]
+	path = demos/biomorphs
+	url = https://github.com/rodikh/biomorphs.git
+[submodule "demos/particles"]
+	path = demos/particles
+	url = https://github.com/rodikh/particles.git
