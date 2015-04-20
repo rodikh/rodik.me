@@ -1,80 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rodik Hanukaev - Software Engineer and Web Developer">
+    <meta name="keywords"
+          content="Rodik, Hanukaev, Rodik Hanukaev, blog, programmer, software engineerm web developer, javascript, html, css, jquery"/>
+    <meta name="author" content="Rodik Hanukaev">
     <title>Rodik Hanukaev</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <meta name="description" content="Rodik Hanukaev's personal website" />
-    <meta name="keywords" content="Rodik, Hanukaev, Rodik Hanukaev, blog, programmer, web developer, javascript, html, css, jquery" />
-    <meta name="author" content="Rodik Hanukaev" />
 
-    <link rel="stylesheet" href="lib/bootstrap//bootstrap.min.css" type="text/css">
-
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="bower_components/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-superhero-theme.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
 </head>
 <body>
-	<div class="page">
-    	<header class="intro">
-	        <h1 class="title">Rodik Hanuakev</h1>
-    	    <h2 class="subtitle">Software Engineer</h2>
-        </header>
-        <section class="content">
-        	<h3>Yes, I'll get this website up and running as quickly as I can. I swear.</h3>
-            <section class="projects">
-            	<h3 class="sectionTitle">Projects:</h3>
-                <ul class="thumbnails projectsList">
-                    <li class="span3 project">
-                        <div class="thumbnail">
-                        	<a href="demos/html5/jsgallery/">
-                                <img class="projectThumb" src="demos/html5/jsgallery/demothumb.jpg" alt="">
-                                <div class="caption">
-                                    <h5>Silk Gallery</h5>
-                                    <p>A dynamic javascript gallery, packaged as a jQuery plugin.<br><br> A work in progress.</p>
-                                </div>
-							</a>
-                        </div>
-                    </li>
-                    <li class="span3 project">
-                        <div class="thumbnail">
-                        	<a href="demos/html5/trianglewars/">
-                                <img class="projectThumb" src="images/260x180.gif" alt="">
-                                <div class="caption">
-                                    <h5>Triangle Wars</h5>
-                                    <p>An HTML5 Canvas proof of concept game, using the CreateJS library.<br><br> A work in progress.</p>
-                                </div>
-							</a>
-                        </div>
-                    </li>
-                    <li class="span3 project">
-                        <div class="thumbnail">
-                        	<a href="demos/html5/tictactoe/">
-                                <img class="projectThumb" src="demos/html5/tictactoe/demothumb.jpg" alt="">
-                                <div class="caption">
-                                    <h5>Tic Tac Toe Game</h5>
-                                    <p>A simple HTML game, Including 3 types of difficulties of AI.<br><br> A work in progress.</p>
-                                </div>
-							</a>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <div class="contact">
-            	<div class="supertitle">In the meantime...</div>
-                <div class="title">Contact Me:</div>
-                <div class="contactInfo">
-                	<div class="twitter"><a target="_blank" href="http://www.twitter.com/rodiktries">@RodikTries</a> - Twitter</div>
-                	<div class="facebook"><a target="_blank" href="http://www.facebook.com/rodik">Rodik Hanukaev</a> - Facebook</div>
-                    <div class="doar_electroni"></div>
+<div class="background">
+    <canvas></canvas>
+</div>
+<header class="container-full text-center page-header">
+    <h1>Rodik Hanukaev</h1>
+    <h2 class="lead">Software Engineer</h2>
+</header>
+
+<div class="container">
+    <hr>
+    <div class="row projects">
+        <section class="col-md-4 category">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Mathematics</h3></div>
+                <div class="panel-body">
+                    <article>
+                        <a href="demos/fractals">Fractals</a>
+                    </article>
+                    <article>
+                        <span>Math Genetics approximator</span>
+                    </article>
+                    <article>
+                        <a href="demos/biomorphs">Biomorphs</a>
+                    </article>
                 </div>
             </div>
         </section>
-        <footer></footer>
+        <section class="col-md-4 category">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Physics & Graphics</h3></div>
+                <div class="panel-body">
+                    <article>
+                        <a href="demos/particle-lines/demos/1">Particle Lines</a>
+                    </article>
+                    <article>
+                        <a href="demos/particle-lines/demos/2">QuadTree</a>
+                    </article>
+                    <article>
+                        <a href="demos/particle-lines/demos/4">Orbital Mechanics</a>
+                    </article>
+                    <article>
+                        <a href="demos/particle-lines/demos/3">Gravitational Physics</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 category">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Games & Game Dev</h3></div>
+                <div class="panel-body">
+                    <article>
+                        <a href="demos/triangle-wars">Triangle Wars</a>
+                    </article>
+                    <article>
+                        <a href="demos/tictactoe">Tic Tac Toe</a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </div>
-    <script type="text/javascript" src="lib/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 
 
+</div>
+<footer>
+    <div class="container">
+        <div class="row text-center contact-icons">
+            <a target="_blank" class="mailto" href="mailto:this.changes@onclick.com"><i class="fa fa-envelope-o"></i></a>
+            <a target="_blank" href="http://www.facebook.com/rodik"><i class="fa fa-facebook-square"></i></a>
+            <a target="_blank" href="http://www.twitter.com/rodiktries"><i class="fa fa-twitter-square"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/profile/view?id=49088225"><i class="fa fa-linkedin-square"></i></a>
+            <a target="_blank" href="http://www.github.com/rodikh"><i class="fa fa-github-square"></i></a>
+        </div>
+        <div class="row text-center">
+            &#0169; Copyright Rodik Hanukaev
+        </div>
+    </div>
+</footer>
+
+<script src="bower_components/rodikh.particle-lines/dist/particle-lines.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-24737267-1', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>
