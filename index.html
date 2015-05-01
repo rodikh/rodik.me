@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="rodikme">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,94 +17,23 @@
     <link href="css/layout.css" rel="stylesheet">
 </head>
 <body>
-<div class="background">
-    <canvas></canvas>
-</div>
-<header class="container-full text-center page-header">
-    <h1>Rodik Hanukaev</h1>
-    <h2 class="lead">Software Engineer</h2>
-</header>
 
-<div class="container page">
-    <div class="row projects">
-        <section class="col-md-4 category">
-            <div class="panel panel-default">
-                <div class="panel-heading"><h3>Mathematics</h3></div>
-                <div class="panel-body">
-                    <article>
-                        <a href="projects/fractals">Fractals</a>
-                    </article>
-                    <article>
-                        <span>Math Genetics approximator</span>
-                    </article>
-                    <article>
-                        <a href="projects/biomorphs">Biomorphs</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="col-md-4 category">
-            <div class="panel panel-default">
-                <div class="panel-heading"><h3>Physics & Graphics</h3></div>
-                <div class="panel-body">
-                    <article>
-                        <a href="projects/particles/demos/1">Particle Engine</a>
-                    </article>
-                    <article>
-                        <a href="projects/particles/demos/2">QuadTree - Particle Lines</a>
-                    </article>
-                    <article>
-                        <a href="projects/particles/demos/4">Orbital Mechanics</a>
-                    </article>
-                    <article>
-                        <a href="projects/particles/demos/3">Gravitational Physics</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="col-md-4 category">
-            <div class="panel panel-default">
-                <div class="panel-heading"><h3>Games & Game Dev</h3></div>
-                <div class="panel-body">
-                    <article>
-                        <a href="projects/triangle-wars">Triangle Wars</a>
-                    </article>
-                    <article>
-                        <a href="projects/tictactoe">Tic Tac Toe</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-</div>
-<footer>
-    <div class="container">
-        <div class="row text-center contact-icons">
-            <a target="_blank" class="mailto" href="mailto:this.changes@onclick.com"><i class="fa fa-envelope-o"></i></a>
-            <a target="_blank" href="http://www.facebook.com/rodik"><i class="fa fa-facebook-square"></i></a>
-            <a target="_blank" href="http://www.twitter.com/rodiktries"><i class="fa fa-twitter-square"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/rodikh"><i class="fa fa-linkedin-square"></i></a>
-            <a target="_blank" href="http://www.github.com/rodikh"><i class="fa fa-github-square"></i></a>
-        </div>
-        <div class="row text-center">
-            &#0169; Copyright Rodik Hanukaev
-        </div>
-    </div>
-</footer>
+    <particle-lines class="background"></particle-lines>
+    <ng-include src="'app/templates/header.html'"></ng-include>
+    <section class="container page">
+        <ng-view></ng-view>
+    </section>
+    <ng-include src="'app/templates/footer.html'"></ng-include>
 
 <script src="bower_components/rodikh.particle-lines/dist/particle-lines.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
 
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script src="app/module.js"></script>
+<script src="app/ParticleBackground.drv.js"></script>
+<script src="app/mailto.drv.js"></script>
+<script src="app/HomeCtrl.js"></script>
 
-    ga('create', 'UA-24737267-1', 'auto');
-    ga('send', 'pageview');
-</script>
+<script src="js/ga.js"></script>
 </body>
 </html>
