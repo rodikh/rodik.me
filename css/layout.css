@@ -16,25 +16,51 @@
 
 /* line 17, layout.scss */
 .page-header {
-  margin-top: 80px;
+  margin: 80px 0 40px;
+  padding: 0;
   border-bottom: none;
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  -webkit-transition: margin 0.4s;
+  transition: margin 0.4s;
 }
-/* line 21, layout.scss */
+/* line 24, layout.scss */
 .page-header h1 {
   font-weight: 600;
 }
-
 /* line 28, layout.scss */
+.page-header h2 {
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  -webkit-transition: margin 0.4s;
+  transition: margin 0.4s;
+}
+/* line 32, layout.scss */
+.page-header.header-compact {
+  margin: 20px 0 15px;
+}
+/* line 35, layout.scss */
+.page-header.header-compact h2 {
+  margin: 10px 0;
+}
+
+/* line 41, layout.scss */
+.page {
+  border-top: 1px solid #596a7b;
+  padding: 20px 10px;
+}
+
+/* line 48, layout.scss */
 .projects .panel {
   min-height: 250px;
 }
 
-/* line 33, layout.scss */
+/* line 53, layout.scss */
 .contact-icons {
   font-size: 50px;
   letter-spacing: 5px;
 }
-/* line 37, layout.scss */
+/* line 57, layout.scss */
 .contact-icons .fa {
   color: #888;
   -moz-transition: color 0.1s;
@@ -42,23 +68,23 @@
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
 }
-/* line 42, layout.scss */
+/* line 62, layout.scss */
 .contact-icons .fa-facebook-square:hover {
   color: #3b5998;
 }
-/* line 45, layout.scss */
+/* line 65, layout.scss */
 .contact-icons .fa-twitter-square:hover {
   color: #55acee;
 }
-/* line 48, layout.scss */
+/* line 68, layout.scss */
 .contact-icons .fa-linkedin-square:hover {
   color: #0976b4;
 }
-/* line 51, layout.scss */
+/* line 71, layout.scss */
 .contact-icons .fa-envelope-o:hover {
   color: #fff;
 }
-/* line 54, layout.scss */
+/* line 74, layout.scss */
 .contact-icons .fa-github-square:hover {
   color: #4183c4;
 }

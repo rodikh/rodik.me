@@ -15,12 +15,32 @@
 }
 
 .page-header {
-  margin-top: 80px;
+  margin: 80px 0 40px;
+  padding: 0;
   border-bottom: none;
+
+  @include transition(margin .4s);
 
   h1 {
     font-weight: 600;
   }
+
+  h2 {
+    @include transition(margin .4s);
+  }
+
+  &.header-compact {
+    margin: 20px 0 15px;
+
+    h2 {
+      margin: 10px 0;
+    }
+  }
+}
+
+.page {
+  border-top: 1px solid #596a7b;
+  padding: 20px 10px;
 }
 
 .projects {
