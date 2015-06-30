@@ -151,5 +151,5 @@ function go_AI(board){
 function game_over(player, board){
 	board.off('click');
 	console.log("player "+player+" won");
-	$('body').css({background: "#efefef"});
+	//$('body').css({background: "#efefef"});
 }
