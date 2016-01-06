@@ -1,0 +1,8 @@
+{
+  "name": "rodik.me",
+  "description": "site",
+  "version": "0.1.0",
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}
